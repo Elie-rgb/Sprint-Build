@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://r6v4jj7whjk5"]
+
+[ext_resource type="Script" uid="uid://d2efeyg1shuk" path="res://main_menu.gd" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://b5eb5xwq5sx3y" path="res://download.webp" id="2_fu7sn"]
+[ext_resource type="FontFile" uid="uid://blxr5ebwyvkvy" path="res://Super Kidpop.ttf" id="3_jix8l"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_glbon"]
+texture = ExtResource("2_fu7sn")
+modulate_color = Color(0.5673677, 0.56736773, 0.56736773, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_06t4h"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fu7sn"]
+bg_color = Color(0.0200621, 0.57462776, 0.0688419, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jix8l"]
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glbon"]
+bg_color = Color(0.89411765, 0.09019608, 0.0627451, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="Main menu" type="Node2D" unique_id=501350907]
+script = ExtResource("1_06t4h")
+
+[node name="Panel" type="Panel" parent="." unique_id=1618812096]
+offset_right = 1154.0
+offset_bottom = 656.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_glbon")
+
+[node name="Button Manager" type="Control" parent="." unique_id=1233853966]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Button Manager" unique_id=116734796]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 396.0
+offset_top = 267.0
+offset_right = 773.0
+offset_bottom = 513.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 28
+
+[node name="Start" type="Button" parent="Button Manager/VBoxContainer" unique_id=772435306]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0.043137256, 1)
+theme_override_font_sizes/font_size = 52
+theme_override_styles/normal = SubResource("StyleBoxFlat_06t4h")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fu7sn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jix8l")
+text = "Start Game"
+metadata/_edit_use_anchors_ = true
+
+[node name="quit" type="Button" parent="Button Manager/VBoxContainer" unique_id=835877646]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0.043137256, 1)
+theme_override_font_sizes/font_size = 52
+theme_override_styles/normal = SubResource("StyleBoxFlat_06t4h")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_glbon")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jix8l")
+text = "quit"
+
+[node name="Label" type="Label" parent="." unique_id=699769825]
+offset_left = 260.0
+offset_top = 33.0
+offset_right = 987.0
+offset_bottom = 214.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0.043137256, 1)
+theme_override_constants/shadow_offset_x = 21
+theme_override_constants/shadow_offset_y = 11
+theme_override_fonts/font = ExtResource("3_jix8l")
+theme_override_font_sizes/font_size = 88
+text = "Mob Survivor"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button Manager/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button Manager/VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Button Manager/VBoxContainer/quit" to="." method="_on_start_pressed"]

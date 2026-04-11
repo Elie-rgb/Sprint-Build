@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Sprint build"
-run/main_scene="uid://d4aih7s1goewg"
+run/main_scene="uid://r6v4jj7whjk5"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
