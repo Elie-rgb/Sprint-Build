@@ -17,6 +17,7 @@ func _physics_process(delta):
 func take_damage():
 	health -=1
 	%Slime.play_hurt()
+	Audiocontroller.play_mobdead()
 	
 	if health == 0:
 		queue_free()

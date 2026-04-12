@@ -15,6 +15,10 @@ run/main_scene="uid://r6v4jj7whjk5"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Audiocontroller="*uid://bb8b63nw6bjm1"
+
 [input]
 
 ui_left={

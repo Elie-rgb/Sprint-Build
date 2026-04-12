@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bb8b63nw6bjm1"]
+
+[ext_resource type="AudioStream" uid="uid://17hyaca6tn2m" path="res://Retro Music Loop - PV8 - NES Style 01.wav" id="1_63xql"]
+[ext_resource type="Script" uid="uid://c5eu1afi5c17a" path="res://audiocontroller.gd" id="1_706l2"]
+[ext_resource type="AudioStream" uid="uid://btnqi5nh5fe2i" path="res://Retro Music - WolfSynth - Tempo Normal - 02.wav" id="2_706l2"]
+[ext_resource type="AudioStream" uid="uid://cjlhcdrp1bqdc" path="res://digital_footstep_grass_3.wav" id="3_hcyaj"]
+[ext_resource type="AudioStream" uid="uid://duofdvig6ugh2" path="res://Retro Gun Laser SingleShot 01.wav" id="4_tp4pc"]
+[ext_resource type="AudioStream" uid="uid://dbgk4m86y5n0w" path="res://Retro Success Melody 04 - electric piano 2.wav" id="5_sbhsl"]
+
+[node name="audiocontroller" type="Node2D" unique_id=1880929421]
+script = ExtResource("1_706l2")
+
+[node name="menu" type="AudioStreamPlayer" parent="." unique_id=622813960]
+stream = ExtResource("1_63xql")
+
+[node name="bg_music" type="AudioStreamPlayer" parent="." unique_id=1555247215]
+stream = ExtResource("2_706l2")
+volume_db = -9.68
+
+[node name="walk" type="AudioStreamPlayer" parent="." unique_id=1383319353]
+stream = ExtResource("3_hcyaj")
+
+[node name="mobdead" type="AudioStreamPlayer" parent="." unique_id=2089468561]
+stream = ExtResource("4_tp4pc")
+
+[node name="endlevel" type="AudioStreamPlayer" parent="." unique_id=624573728]
+stream = ExtResource("5_sbhsl")
